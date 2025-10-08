@@ -15,7 +15,10 @@ class HomeViewBody extends StatelessWidget {
           if (state is GetCoffeeSuccess) {
             return ListView.separated(
               itemBuilder: (context, index) {
-                return CoffeeItem(coffeModel: state.coffeList[index]);
+                return Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8),
+                  child: CoffeeItem(coffeModel: state.coffeList[index]),
+                );
               },
               separatorBuilder: (context, index) {
                 return SizedBox(height: 10);
@@ -71,10 +74,10 @@ class CoffeeItem extends StatelessWidget {
           SizedBox(width: 10),
           Expanded(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
               spacing: 5,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                SizedBox(height: 20),
                 Text(
                   coffeModel.title,
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
