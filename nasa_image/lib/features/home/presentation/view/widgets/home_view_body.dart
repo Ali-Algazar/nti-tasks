@@ -51,7 +51,7 @@ class NaseImageItem extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(12),
       width: MediaQuery.sizeOf(context).width * 0.4,
-      height: 200,
+      height: 300,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
         image: DecorationImage(
